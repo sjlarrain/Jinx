@@ -4,6 +4,15 @@ import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
 
+# Check if the database and table exist
+conn = sqlite3.connect('master_database.db')
+cursor = conn.cursor()
+cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='master_table';")
+table_exists = cursor.fetchone()
+if not table_exists:
+    raise Exception("Table 'master_table' does not exist. Please run 'main.py' to create the table.")
+conn.close()
+
 # Load the data from the SQLite database
 conn = sqlite3.connect('master_database.db')
 df = pd.read_sql_query("SELECT * FROM master_table", conn)

@@ -8,6 +8,8 @@ This project involves loading data from text files, processing it, and visualizi
 - `visualization.py`: Dash application to visualize the database with filters for each column.
 - `visualization_streamlit.py`: Streamlit application to visualize the database with filters for each column.
 - `work_station.ipynb`: Jupyter notebook to load and process data.
+- `BBDD_Schema/BBDD_J&S.drawio`: Diagram of the database schema in draw.io format.
+- `BBDD_Schema/BBDD_J&S.pdf`: Diagram of the database schema in PDF format.
 
 ## Data
 
@@ -19,12 +21,19 @@ The data is stored in the `BBDD` folder and includes the following files:
 - `PUB_NOM_DOMICILIO.txt`
 - `PUB_NOM_ACTECOS.txt`
 
+For more information, visit [this link](https://www.sii.cl/sobre_el_sii/nominapersonasjuridicas.html).
+
+## Database Schema
+
+The database schema is represented in the `BBDD_Schema/BBDD_J&S.drawio` and `BBDD_Schema/BBDD_J&S.pdf` files. These files provide a visual representation of the relationships between the tables and the structure of the data.
+
 ## Usage
 
-1. Run `main.py` to load and process the data, and save it to a SQLite database.
-2. Use `visualization.py` to visualize the data using Dash.
-3. Use `visualization_streamlit.py` to visualize the data using Streamlit.
-4. Use `work_station.ipynb` to interactively load and process the data in a Jupyter notebook.
+1. Run `run_install.py` to install the required libraries by executing `install_requirements.sh`.
+2. Run `main.py` to load and process the data, and save it to a SQLite database.
+3. Use `visualization.py` to visualize the data using Dash.
+4. Use `visualization_streamlit.py` to visualize the data using Streamlit.
+5. Use `work_station.ipynb` to interactively load and process the data in a Jupyter notebook.
 
 ## Requirements
 

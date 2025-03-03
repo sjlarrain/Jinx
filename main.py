@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import sqlite3
 
 files = os.listdir('BBDD')
 dataframes = {}
@@ -25,6 +26,18 @@ num_sucursales = dataframes["PUB_NOM_SUCURSAL"]["RUT"].value_counts().reset_inde
 master = pd.merge(master, num_sucursales, on="RUT")
 master["Num_sucursales"] = master["count"]
 master.drop(columns=["count"], inplace=True)
+
+# Create a connection to a new SQLite database
+conn = sqlite3.connect('master_database.db')
+
+# Convert the master DataFrame to a SQL table
+master.to_sql('master_table', conn, if_exists='replace', index=False)
+
+# Confirm table creation
+print("Table 'master_table' created successfully.")
+
+# Close the connection
+conn.close()
 
 
 
