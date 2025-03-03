@@ -1,0 +1,32 @@
+# Ignore the BBDD folder
+BBDD/
+
+# Usual
+
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+build/
+dist/
+output/
+files/
+
+*.exe
+*.pptx
+*.ppt
+*.xls
+*.xlsx
+*.db
+*.db-journal
+*.csv
+*.pdf
+*.nix
+*.toml
+*.lock
+*.replit
+*.ipynb
+
+# Do not ignore PDFs in BBDD Schema
+!BBDD Schema/*.pdf
+
+secrets.py
