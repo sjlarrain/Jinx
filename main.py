@@ -7,13 +7,15 @@ dataframes = {}
 for file in files:
     name = file.strip('.txt')
     dataframes[name] = pd.read_csv('BBDD/' + file, sep='\t')
-    # try:
-    #     if name != "PUB_NOM_SUCURSAL":
-    #         dataframes[name].drop_duplicates(subset=["RUT"], keep='first', inplace=True)      
-    # except:
-    #     pass
+    
 
 master = dataframes["PUB_EMPRESAS_PJ_2020_A_2024"]
+
+for name, df in dataframes.items():
+    if "PUB_EMPRESAS_PJ" in name and name != "PUB_EMPRESAS_PJ_2020_A_2024":
+        master = pd.concat([master, df])
+
+
 
 names_code = pd.merge(dataframes["PUB_NOMBRES_PJ"], 
                       dataframes["CODIGO_TIPO_SUBTIPO"],
