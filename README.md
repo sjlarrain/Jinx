@@ -10,6 +10,8 @@ This project involves loading data from text files, processing it, and visualizi
 - `work_station.ipynb`: Jupyter notebook to load and process data.
 - `BBDD_Schema/BBDD_J&S.drawio`: Diagram of the database schema in draw.io format.
 - `BBDD_Schema/BBDD_J&S.pdf`: Diagram of the database schema in PDF format.
+- `install_requirements.sh`: Shell script to install the required libraries.
+- `install_requirements_windows.py`: Python script to install the required libraries on Windows.
 
 ## Data
 
@@ -29,11 +31,12 @@ The database schema is represented in the `BBDD_Schema/BBDD_J&S.drawio` and `BBD
 
 ## Usage
 
-1. Run `run_install.py` to install the required libraries by executing `install_requirements.sh`.
-2. Run `main.py` to load and process the data, and save it to a SQLite database.
-3. Use `visualization.py` to visualize the data using Dash.
-4. Use `visualization_streamlit.py` to visualize the data using Streamlit.
-5. Use `work_station.ipynb` to interactively load and process the data in a Jupyter notebook.
+1. Run `install_requirements.sh` to install the required libraries on Linux.
+2. Run `install_requirements_windows.py` to install the required libraries on Windows.
+3. Run `main.py` to load and process the data, and save it to a SQLite database.
+4. Use `visualization.py` to visualize the data using Dash.
+5. Use `visualization_streamlit.py` to visualize the data using Streamlit.
+6. Use `work_station.ipynb` to interactively load and process the data in a Jupyter notebook.
 
 ## Requirements
 
